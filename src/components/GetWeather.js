@@ -15,7 +15,7 @@ const GetWeather = () => {
 		async function dataRetrieve() {
 			const city = 'Boston';
 			const res = await axios.get(
-				`http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=e9629992d0bde86eaddc6391f50171b7`,
+				`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=e9629992d0bde86eaddc6391f50171b7`,
 			);
 
 			weatherDisplay(res.data);
@@ -27,7 +27,7 @@ const GetWeather = () => {
 	const searchUser = async (text) => {
 		try {
 			const res = await axios.get(
-				`http://api.openweathermap.org/data/2.5/weather?q=${text}&units=metric&appid=e9629992d0bde86eaddc6391f50171b7`,
+				`https://api.openweathermap.org/data/2.5/weather?q=${text}&units=metric&appid=e9629992d0bde86eaddc6391f50171b7`,
 			);
 
 			weatherDisplay(res.data);
